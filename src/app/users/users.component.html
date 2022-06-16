@@ -1,0 +1,12 @@
+
+<app-add-user (userNameEmitter)="onButtonClicked($event)"></app-add-user>
+
+<h2>Users List</h2>
+<button class="btn btn-success" (click)="onNameChange()">onChangesTrigger</button>
+<button class="btn btn-danger" (click)="onMakingListEmpty()">Delete the list</button>
+<app-user *ngFor="let user of usersList"  [userName]="user" [name]="name">
+    <p #userParagraph>Hi Friends, I'm {{user}}</p>
+</app-user>
+
+<p appHighlightText >Color babu</p>
+<p appRendererHighlight [defaultColor] = "'yellow'" [highLightColor]="'black'">Color babu</p>
